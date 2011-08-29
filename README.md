@@ -13,7 +13,7 @@ This is a very basic Sinatra web application I wrote for fun, testing and learni
 
 # Getting started
     
-    $ git clone 
+    $ git clone git@github.com:florinpatrascu/dnsimple_touch.git
     $ cd dnsimple_touch
     $ bundle install
     $ thin start 
@@ -34,7 +34,7 @@ Or you can use [iPhoney](http://marketcircle.com/iphoney/), as a viable alternat
 
 You should be able to see this screen from your simulator (spoiler alert):
 
-![demo screenshot](https://github.com/florinpatrascu/dnsimple_touch/raw/master/public/images/dnsimple_touch_home_screen_preview_.png)
+![demo screenshot](https://github.com/florinpatrascu/dnsimple_touch/raw/master/public/images/dnsimple_touch_home_screen_preview.png)
 
 
 # Noteworthy
