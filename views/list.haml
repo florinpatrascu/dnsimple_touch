@@ -1,0 +1,11 @@
+%div{:id => @page}
+  .toolbar
+    %h1
+      = @page
+  .vertical-scroll.use-bottom-toolbar
+    %div
+      %ul.rounded
+        - @items.each do |item|
+          %li
+            = item
+  = haml :footer

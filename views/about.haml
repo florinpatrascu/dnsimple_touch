@@ -1,0 +1,27 @@
+#about
+  .toolbar
+    %h1
+      About
+    %a.back{:href => "/home"} Back
+
+  .vertical-scroll.use-bottom-toolbar
+    %ul.rounded-info
+      %h2 What is DNSimple? 
+      
+      %p
+        %a{:href => "http://dnsimple.com", :target=>"_webapp"} DNSimple
+        is a hosted DNS service that you can use to manage your domains. Plans start at $3 per month. We offer both a web-based interface and an iPhone application for adding and removing domains and DNS records as well as an HTTP API and command-line tool.
+      %h2 How Much Does it Cost?
+      %p
+        %b SILVER:
+        $3/month, up to 10 domains
+        %br
+        
+        %b GOLD:
+        $10/month, up to 50 domains
+        
+        %br
+        %b PLATINUM: 
+        $50/month, up to 500 domains
+  = haml :footer
+  

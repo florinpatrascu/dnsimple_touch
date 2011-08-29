@@ -1,0 +1,27 @@
+!!! Strict
+%html{html_attrs}
+  %head
+    %meta{:charset => "UTF-8"}/
+    %title= yield(:title) || "Untitled"
+    / = stylesheet_link_tag "/jqtouch/jqtouch.css", "/jqtouch/themes/jqt/theme.css"
+    / = javascript_include_tag "/jqtouch/jquery-1.4.2.min.js", "/jqtouch/jqtouch.js"
+    / = javascript_include_tag "/jqtouch/extensions/jqt.scrolling.js", "/jqtouch/extensions/jqt.floaty.js"
+    / = javascript_include_tag "/init.js", "/dnsimple-touch.js"
+    / = yield(:head)
+    %style{ :type => "text/css", :media => "screen" } @import "jqtouch/jqtouch.css";
+    %style{ :type => "text/css", :media => "screen" } @import "jqtouch/themes/jqt/theme.css";
+    %style{ :type => "text/css", :media => "screen" } @import "jqtouch/extensions/scrolling.css";
+    %style{ :type => "text/css", :media => "screen" } @import "styles/main.css";
+    %script{ :src => "jqtouch/jquery-1.4.2.min.js", :type => "text/javascript", :charset => "utf-8" }
+    %script{ :src => "jqtouch/jqtouch.js", :type => "application/x-javascript", :charset => "utf-8" }
+    %script{ :src => "jqtouch/extensions/jqt.scrolling.js", :type => "application/x-javascript", :charset => "utf-8" }
+    %script{ :src => "jqtouch/extensions/jqt.floaty.js", :type => "application/x-javascript", :charset => "utf-8" }
+    %script{ :src => "javascripts/init.js", :type => "application/x-javascript", :charset => "utf-8" }
+    %script{ :src => "javascripts/dnsimple-touch.js", :type => "application/x-javascript", :charset => "utf-8" }
+    
+  %body
+    #jqt.current
+      - %w[notice error warning alert info].each do |key|
+        - if flash[key]
+          %div{:id => key,:class => "flash"}= flash[key]
+      = yield

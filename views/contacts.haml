@@ -1,0 +1,18 @@
+#contacts
+  .toolbar
+    %h1
+      Contacts
+    %a.back{:href => "/home"} Back
+
+  .vertical-scroll.use-bottom-toolbar
+    %div
+      %ul
+        -unless @contacts.nil?
+          - @contacts.each do |contact|
+            %li.rounded
+              %a{:href => "#"}
+                ="#{contact.first_name}, #{contact.last_name}"
+                / todo: implement the details screen  [2011.08.28 florin]
+        -else
+          %li No contacts
+  = haml :footer

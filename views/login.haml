@@ -1,0 +1,20 @@
+#login
+  .toolbar
+    %h1 Authentication
+    %a.back{:href => "/home"} Back
+  - %w[notice error warning alert info].each do |key|
+    - if flash[key]
+      %div{:class => "#{key}"}= flash[key]
+  .vertical-scroll.use-bottom-toolbar
+    %div
+    - if @error
+      .info
+        = @error
+    %form.form{:action => "/sign-in#sign-in", :method => :post, "accept-charset"=>"utf-8"}
+      %ul.rounded
+        %li
+          %input{:type => "text", :name => "email", :placeholder => "you@email.com", :value => params[:email]}
+        %li
+          %input{ :type => "password", :name => "password", :placeholder => "password", :value => ''}
+      %a.submit.grayButton{:href => "#"} Sign in
+  = haml :footer

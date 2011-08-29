@@ -1,0 +1,21 @@
+!!! Strict
+%html{ :lang => "en", :xmlns => "http://www.w3.org/1999/xhtml" }
+  %head
+    %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "Content-Type" }
+    %title
+      DNSimple mobile web
+    %style{ :type => "text/css", :media => "screen" } @import "jqtouch/jqtouch.css";
+    %style{ :type => "text/css", :media => "screen" } @import "jqtouch/themes/jqt/theme.css";
+    %style{ :type => "text/css", :media => "screen" } @import "jqtouch/extensions/scrolling.css";
+    %style{ :type => "text/css", :media => "screen" } @import "styles/main.css";
+    %script{ :src => "jqtouch/jquery-1.4.2.min.js", :type => "text/javascript", :charset => "utf-8" }
+    %script{ :src => "jqtouch/jqtouch.js", :type => "application/x-javascript", :charset => "utf-8" }
+    %script{ :src => "jqtouch/extensions/jqtouch.transitions.js", :type => "application/x-javascript", :charset => "utf-8" }
+    %script{ :src => "jqtouch/extensions/jqt.scrolling.js", :type => "application/x-javascript", :charset => "utf-8" }
+    %script{ :src => "jqtouch/extensions/jqt.floaty.js", :type => "application/x-javascript", :charset => "utf-8" }
+    %script{ :src => "javascripts/init.js", :type => "application/x-javascript", :charset => "utf-8" }
+    %script{ :src => "javascripts/dnsimple-touch.js", :type => "application/x-javascript", :charset => "utf-8" }
+
+  %body
+    #jqt.current
+      =haml :home

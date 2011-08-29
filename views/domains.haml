@@ -1,0 +1,17 @@
+#domains
+  .toolbar
+    %h1 Domains
+    %a.back{:href => "/home"} Back
+  .vertical-scroll.use-bottom-toolbar
+    %div
+      - if @error
+        .info
+          = @error
+      %ul.rounded
+        -unless @domains.nil?
+          - @domains.each do |d|
+            %li.rounded
+              %a{:href => "#"}="#{d.name} (#{d.name_server_status})"
+        -else
+          %li Add a domain ...
+  = haml :footer

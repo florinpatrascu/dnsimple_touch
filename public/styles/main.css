@@ -1,0 +1,70 @@
+#jqt ul.rounded-info { 
+-webkit-border-radius:8px; 
+-webkit-box-shadow:rgba(0,0,0,.3) 1px 1px 3px; 
+font-size:80%; 
+color:#000; 
+background-color:#fff; 
+font-weight:normal; 
+} 
+
+#jqt ul.rounded-info p { 
+  padding:10px; 
+}
+
+div.progress, div.error {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
+div.loader{
+    background:transparent url(/images/ajax-loader.gif) no-repeat center center;
+    position:absolute;
+    top:90px;
+    width:100%;
+    left:0px;
+    height:24px;
+}
+
+div.progress {
+    background-image: url(/images/loading.gif);
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 50px;
+    opacity: 0.4;
+}
+
+div.error {
+    text-align: center;
+    font-weight: bold;
+}
+
+img {
+  border: 0
+}
+
+#icon-domains{
+	background: url(/images/fancy-globe.png) 1px 7px no-repeat;
+	padding: 0 0 0 36px;    
+}
+#icon-templates{
+	background: url(/images/copy-item.png) 1px 7px no-repeat;
+	padding: 0 0 0 36px;    
+}
+#icon-contacts{
+	background: url(/images/multi-agents.png) 1px 7px no-repeat;
+	padding: 0 0 0 36px;    
+}
+#icon-login{
+	background: url(/images/lock.png) 1px 7px no-repeat;
+	padding: 0 0 0 36px;    
+}
+#icon-account{
+	background: url(/images/unlock.png) 1px 7px no-repeat;
+	padding: 0 0 0 36px;    
+}
+
+#copyright{
+  font: 75% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+}
+

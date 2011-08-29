@@ -1,0 +1,18 @@
+#domains
+  .toolbar
+    %h1 Templates
+    %a.back{:href => "/home"} Back
+  .vertical-scroll.use-bottom-toolbar
+    %div
+      - if @error
+        .info
+          = @error
+      / will do the difference between Services and user Templates
+      %ul.rounded
+        -unless @templates.nil?
+          - @templates.each do |t|
+            %li.rounded
+              %a{:href => "#"}=t.name
+        -else
+          %li none available
+  = haml :footer

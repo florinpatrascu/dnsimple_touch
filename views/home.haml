@@ -1,0 +1,28 @@
+#home
+  .toolbar
+    %h1
+      DNSimple
+    %a.fade.button.rightButton{ :href => "/about"}
+      About    
+
+  .vertical-scroll.use-bottom-toolbar
+    -if not @dnsimple.logged_in?
+      .info
+        Please login first
+    %ul.rounded
+      - %w[Domains Templates Contacts].each do |key|
+        -if @dnsimple.logged_in?
+          %li.arrow
+            %div{ :id=>"icon-#{key.downcase}"}
+              %a{ :href => "/#{key.downcase}"}=key
+        -else
+          %li=key
+            
+      %li.arrow
+        -if @dnsimple.logged_in?
+          #icon-account
+            %a{:href => "/account"} Account info
+        -else
+          #icon-login
+            %a{:href => "/login"} Login
+  = haml :footer

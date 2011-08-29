@@ -1,0 +1,17 @@
+#account
+  .toolbar
+    %h1
+      DNSimple
+    %a.back{:href => "/home"} Back
+
+  .vertical-scroll.use-bottom-toolbar
+    %ul.rounded-info
+      / %li="#{@dnsimple_user.id}"
+      %p="eMail: #{@dnsimple_user.email}"
+      %p="Login count: #{@dnsimple_user.login_count}, failed logins: #{@dnsimple_user.failed_login_count}"
+      %p="Domains: #{@dnsimple_user.domain_count} out of: #{@dnsimple_user.domain_limit}"
+      %p="DSNimple user since: #{@dnsimple_user.updated_at.strftime("%m/%d/%Y")}"
+    
+    %form.form{:action => "/logout", :method => :post, "accept-charset"=>"utf-8"}
+      %a.submit.grayButton{:href => "#"} Logout
+  = haml :footer
